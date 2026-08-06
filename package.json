@@ -1,0 +1,33 @@
+{
+  "name": "conjugeur-auto-tamazight-kab",
+  "version": "1.0.0",
+  "description": "Moteur morphologique kabyle déterministe fondé sur les sources documentaires du projet.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "clean": "node --input-type=module -e \"import { rmSync } from 'node:fs'; rmSync('dist', { recursive: true, force: true });\"",
+    "validate": "npm test && npm run typecheck && npm run lint && npm run build && npm run clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "^26.1.2",
+    "eslint": "10.8.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.66.0",
+    "vitest": "^4.1.10"
+  },
+  "private": true,
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

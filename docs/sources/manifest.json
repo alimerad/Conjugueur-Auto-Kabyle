@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-08-06T14:50:09.478Z",
+  "purpose": "Sources Markdown traçables pour agents et moteur morphologique kabyle",
+  "documents": [
+    {
+      "documentId": "bouamara-volume-1-formes-de-base-2026",
+      "title": "Modélisation des types morphologiques et de la conjugaison du verbe kabyle - Première partie : formes de base",
+      "author": "Kamel Bouamara",
+      "sourceFile": "Modélisation.pdf",
+      "sourceSha256": "d87b08e997a904311b350dec8f7a45a0b69e5741b010a6c6f8689067b601a9f6",
+      "sourcePages": 24,
+      "markdownFile": "volume-1-formes-de-base.md",
+      "markdownSha256": "96a909c3e88c33b6ef1bf946095e8dc83d3435d7f11036ce9a0320bfe5d0c84e",
+      "markdownLines": 1292,
+      "extractionEngine": "pdftotext",
+      "extractionEngineVersion": "pdftotext version 4.00",
+      "extractedAtUtc": "2026-08-06T14:50:06.809Z",
+      "unicodeNormalization": "NFC",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "documentId": "bouamara-analyse-morphologique-2026",
+      "title": "Analyse morphologique du verbe kabyle - Régularité, irrégularité et défectivité en taqbaylit",
+      "author": "Kamel Bouamara",
+      "sourceFile": "verbe kabyle- analyse morphologique.pdf",
+      "sourceSha256": "c91895dfdf5df90c277751db8a8dd883fe3d69fc28699e0deafc23932f067569",
+      "sourcePages": 9,
+      "markdownFile": "analyse-morphologique.md",
+      "markdownSha256": "34a552d8bb31aca5e700794310ed599ffabff37859a400d9fd6a50c16fdd74a9",
+      "markdownLines": 474,
+      "extractionEngine": "pdftotext",
+      "extractionEngineVersion": "pdftotext version 4.00",
+      "extractedAtUtc": "2026-08-06T14:50:07.228Z",
+      "unicodeNormalization": "NFC",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "documentId": "bouamara-volume-2-formes-derivees-2026",
+      "title": "Modélisation des types morphologiques et de la conjugaison du verbe kabyle - Deuxième volume : formes dérivées",
+      "author": "Kamel Bouamara",
+      "sourceFile": "Modelisation_2e Volume.pdf",
+      "sourceSha256": "e2f1b31f325850ce04c37a5d7827cd2463ac71718bbba2dd81fa5822a7d38db2",
+      "sourcePages": 18,
+      "markdownFile": "volume-2-formes-derivees.md",
+      "markdownSha256": "fdbb6debc8a1eb2f56c9378c713fb34ba8d5443aecb2f55e41f961ffbb91d061",
+      "markdownLines": 1207,
+      "extractionEngine": "pdftotext",
+      "extractionEngineVersion": "pdftotext version 4.00",
+      "extractedAtUtc": "2026-08-06T14:50:07.693Z",
+      "unicodeNormalization": "NFC",
+      "reviewStatus": "unreviewed"
+    }
+  ]
+}
