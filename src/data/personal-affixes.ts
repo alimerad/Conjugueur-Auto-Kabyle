@@ -102,7 +102,8 @@ export const STANDARD_PERSONAL_AFFIXES = {
       printedPage: 9,
       note:
         "Règles 14.2 et 15.1 : suffixes vocaliques " +
-        "et voyelle d’appui.",
+        "et voyelle d’appui. Règle 15.2 : collision " +
+        "t + tt- et schwa d’appui.",
     },
     {
       documentId:
@@ -118,6 +119,7 @@ export const STANDARD_PERSONAL_AFFIXES = {
   ],
   scope:
     "Affixes ordinaires appliqués aux thèmes du " +
-    "premier jalon G3.1-1. Les verbes d’état et " +
-    "les collisions tett- restent hors périmètre.",
+    "premier jalon G3.1-1. Les collisions t + tt- " +
+    "sont prises en charge. Les verbes d’état restent " +
+    "hors périmètre.",
 } as const satisfies PersonalAffixDescription;

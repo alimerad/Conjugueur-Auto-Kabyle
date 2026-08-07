@@ -84,14 +84,50 @@ const prepareZeroSuffixForm = (
   return `${prefix}${theme}`;
 };
 
+const startsWithInitialSchwa = (
+  value: string,
+): boolean => {
+  const [first, second, third] = Array.from(value);
+
+  return (
+    first === "e" &&
+    isConsonant(second) &&
+    isConsonant(third)
+  );
+};
+
+const startsWithGeminate = (
+  value: string,
+): boolean => {
+  const [first, second] = Array.from(value);
+
+  return (
+    isConsonant(first) &&
+    first === second
+  );
+};
+
 const prepareVocalicSuffixForm = (
   theme: string,
   prefix: string,
 ): string => {
+  if (
+    prefix === "" &&
+    startsWithInitialSchwa(theme)
+  ) {
+    return theme.slice(1);
+  }
+
   let preparedTheme = theme.replace(
     PRE_FINAL_SCHWA,
     "",
   );
+
+  if (startsWithGeminate(preparedTheme)) {
+    return prefix === ""
+      ? preparedTheme
+      : `${prefix}e${preparedTheme}`;
+  }
 
   if (
     startsWithConsonants(preparedTheme, 3)
@@ -145,7 +181,16 @@ export const inflectTheme = (
           affix,
         );
 
-  return `${prefixedTheme}${affix.suffix}`;
+  const realizedSuffix =
+    affix.suffixKind === "vocalic" &&
+    VOWEL.test(
+      Array.from(prefixedTheme).at(-1) ?? "",
+    ) &&
+    affix.suffix.startsWith("e")
+      ? affix.suffix.slice(1)
+      : affix.suffix;
+
+  return `${prefixedTheme}${realizedSuffix}`;
 };
 
 export const inflectThemeForAllPersons = (

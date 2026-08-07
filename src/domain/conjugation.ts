@@ -57,4 +57,14 @@ export interface PersonalAffixDescription {
   readonly scope: string;
 }
 
-export type ConjugatableType = MorphologicalType;
+export const CONJUGATABLE_TYPE_IDS = [
+  "G3.1-1",
+] as const;
+
+export type ConjugatableTypeId =
+  (typeof CONJUGATABLE_TYPE_IDS)[number];
+
+export type ConjugatableType =
+  MorphologicalType & {
+    readonly id: ConjugatableTypeId;
+  };
