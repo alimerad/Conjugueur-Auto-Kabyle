@@ -24,6 +24,21 @@ jobs:
     timeout-minutes: 10
 
     steps:
+      - name: Verify main PR source
+        if: ${{ github.event_name == 'pull_request' && github.base_ref == 'main' }}
+        shell: bash
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          case "$HEAD_REF" in
+            dev|release-please--branches--main*)
+              ;;
+            *)
+              echo "::error::Pull requests to main are only allowed from dev or Release Please."
+              exit 1
+              ;;
+          esac
+
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
