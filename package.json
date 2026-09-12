@@ -1,6 +1,6 @@
 {
   "name": "conjugueur-auto-kabyle",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Moteur morphologique kabyle déterministe fondé sur les sources documentaires du projet.",
   "main": "index.js",
   "scripts": {
